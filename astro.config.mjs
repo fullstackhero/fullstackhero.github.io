@@ -7,6 +7,9 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [starlight({
     title: 'fullstackhero',
+    editLink: {
+      baseUrl: 'https://github.com/fullstackhero/docs/edit/astro/docs/',
+    },
     social: {
       github: 'https://github.com/withastro/starlight'
     },
