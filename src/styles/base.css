@@ -1,0 +1,32 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @apply !font-light;
+}
+
+.large {
+    @apply !font-normal
+}
+
+:root {
+    --sl-content-width: 115rem !important;
+}
+
+.header {
+    @apply font-normal bg-white dark:bg-slate-950
+}
+
+.site-title {
+    @apply text-black font-normal dark:text-white
+}
+
+.pagination-links a {
+    @apply shadow-none rounded-none
+}
+
+.right-sidebar-container {
+    width: 20rem !important;
+}
