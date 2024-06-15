@@ -8,7 +8,7 @@ export default defineConfig({
   integrations: [starlight({
     title: 'fullstackhero',
     editLink: {
-      baseUrl: 'https://github.com/fullstackhero/docs/edit/astro/docs/',
+      baseUrl: 'https://github.com/fullstackhero/docs/edit/astro/',
     },
     social: {
       github: 'https://github.com/withastro/starlight'
