@@ -7,6 +7,10 @@ h6 {
     @apply !font-light;
 }
 
+a {
+    @apply no-underline
+}
+
 .large {
     @apply !font-normal
 }
@@ -29,4 +33,20 @@ h6 {
 
 .right-sidebar-container {
     width: 20rem !important;
+}
+
+.action {
+    border-radius: 10px !important;
+    padding: 12px;
+}
+
+.content-panel:has(h1#_top:not([data-page-title])) {
+    display: none;
+}
+
+.header {
+    border-bottom: none !important;
+    background-color: transparent !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    backdrop-filter: blur(16px) !important;
 }
