@@ -8,7 +8,7 @@ h6 {
 }
 
 a {
-    @apply no-underline
+    @apply no-underline dark:text-white text-black
 }
 
 .large {
@@ -16,7 +16,7 @@ a {
 }
 
 :root {
-    --sl-content-width: 115rem !important;
+    --sl-content-width: 120rem !important;
 }
 
 .header {
@@ -40,13 +40,19 @@ a {
     padding: 12px;
 }
 
-.content-panel:has(h1#_top:not([data-page-title])) {
-    display: none;
-}
-
 .header {
-    border-bottom: none !important;
-    background-color: transparent !important;
     -webkit-backdrop-filter: blur(16px) !important;
     backdrop-filter: blur(16px) !important;
+}
+
+header {
+    border-bottom: 1px solid var(--sl-color-gray-6) !important;
+}
+
+.sidebar-pane {
+    border-right: 1px solid var(--sl-color-gray-6) !important;
+}
+
+*:focus {
+    outline: none;
 }
