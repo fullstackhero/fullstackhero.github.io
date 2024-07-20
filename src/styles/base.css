@@ -56,3 +56,15 @@ header {
 *:focus {
     outline: none;
 }
+
+.hero {
+    grid-template-columns: none !important;
+}
+
+.copy {
+    @apply items-center;
+}
+
+.stack {
+    @apply text-center items-center;
+}

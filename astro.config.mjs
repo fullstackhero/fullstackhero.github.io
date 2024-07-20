@@ -18,16 +18,14 @@ export default defineConfig({
       './src/styles/base.css'
     ],
     sidebar: [{
-      label: 'Getting Started',
-      items: [
-        {
-          label: 'Example Guide',
-          link: '/guides/example/'
-        }]
-    }, {
-      label: 'Reference',
+      label: 'General',
       autogenerate: {
-        directory: 'reference'
+        directory: '/dotnet-starter-kit/general/'
+      }
+    }, {
+      label: 'Web API',
+      autogenerate: {
+        directory: '/dotnet-starter-kit/webapi/'
       }
     }]
   }),
