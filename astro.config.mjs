@@ -1,22 +1,20 @@
 import starlight from '@astrojs/starlight';
+import tailwind from "@astrojs/tailwind";
 import { defineConfig } from 'astro/config';
 
-import tailwind from "@astrojs/tailwind";
+import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
   integrations: [starlight({
     title: 'fullstackhero',
     editLink: {
-      baseUrl: 'https://github.com/fullstackhero/docs/edit/astro/',
+      baseUrl: 'https://github.com/fullstackhero/docs/edit/astro/'
     },
     social: {
       github: 'https://github.com/withastro/starlight'
     },
-    customCss: [
-      './src/styles/tailwind.css',
-      './src/styles/base.css'
-    ],
+    customCss: ['./src/styles/tailwind.css', './src/styles/custom.scss'],
     sidebar: [{
       label: 'General',
       autogenerate: {
@@ -28,10 +26,7 @@ export default defineConfig({
         directory: '/dotnet-starter-kit/webapi/'
       }
     }]
-  }),
-  tailwind(
-    {
-      applyBaseStyles: false,
-    }
-  )]
+  }), tailwind({
+    applyBaseStyles: false
+  }), react()]
 });
