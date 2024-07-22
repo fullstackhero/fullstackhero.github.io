@@ -11,8 +11,15 @@ export default defineConfig({
     editLink: {
       baseUrl: 'https://github.com/fullstackhero/docs/edit/astro/'
     },
+    logo: {
+      src: './src/assets/full-stack-hero-logo.png',
+    },
     social: {
-      github: 'https://github.com/withastro/starlight'
+      github: 'https://github.com/fullstackhero/dotnet-starter-kit',
+      linkedin: 'https://www.linkedin.com/in/iammukeshm/',
+      youtube: 'https://www.youtube.com/@codewithmukesh',
+      twitter: 'https://x.com/iammukeshm',
+
     },
     customCss: ['./src/styles/tailwind.css', './src/styles/custom.scss'],
     sidebar: [{

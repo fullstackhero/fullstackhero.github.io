@@ -44,9 +44,8 @@ body {
 }
 
 a.site-title img {
-  height: 22px;
   width: auto;
-  margin-right: 16px;
+  margin-right: 0px;
 }
 
 header.header {
@@ -287,4 +286,9 @@ header {
 
 *:focus {
   outline: none;
+}
+
+.site-title{
+  font-weight: 100;
+  gap: 10px;
 }
