@@ -29,7 +29,7 @@ body {
     [data-theme='dark'] & {
       background-image: radial-gradient(100% 100% at 50% 0%, transparent 60%, rgba(0, 0, 0, 0.4) 100%);
       &::before {
-        background-image: linear-gradient(transparent 60%, rgba(0, 0, 0, 0.8) 100%);
+        background-image: linear-gradient(transparent 100%, rgba(0, 0, 0, 0.8) 100%);
       }
     }
 
