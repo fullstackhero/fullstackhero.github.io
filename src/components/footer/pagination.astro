@@ -1,0 +1,8 @@
+---
+import Default from '@astrojs/starlight/components/Pagination.astro';
+import type { Props } from '@astrojs/starlight/props';
+import Support from './support.astro';
+---
+
+<Default {...Astro.props}><slot/></Default>
+<Support/>

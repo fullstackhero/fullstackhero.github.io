@@ -1,0 +1,26 @@
+---
+import { Icon } from "astro-icon/components";
+---
+<div>
+  <a
+    href="https://opencollective.com/fullstackhero#category-CONTRIBUTE"
+    target="_blank"
+    class:list={[
+      "my-6 flex items-center gap-6 rounded-lg px-6 py-5 ",
+      "text-white transition-all",
+      "bg-gradient-to-r from-[#4c33d8] to-[#4c33d8]",
+    ]}
+  >
+    <span class="text-md grow">
+      <div class="mb-2 text-2xl font-light">Support ❤️</div>
+      <span class="text-md font-light">
+        Contribute on Open Collective to support the fullstackhero .NET Starter Kit Project!
+      </span>
+    </span>
+    <span
+      class="hidden h-14 w-14 shrink-0 items-center justify-center rounded-full bg-transparent md:flex"
+    >
+      <Icon class="text-5xl" name="sponsors/heart" />
+    </span>
+  </a>
+</div>
