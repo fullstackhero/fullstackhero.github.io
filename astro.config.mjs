@@ -53,6 +53,13 @@ export default defineConfig({
         directory: '/dotnet-starter-kit/aspire/',
         collapsed: true
       }
+    }, {
+      label: 'Deployments',
+      collapsed: true,
+      autogenerate: {
+        directory: '/dotnet-starter-kit/deployments/',
+        collapsed: true
+      }
     }]
   }), tailwind({
     applyBaseStyles: false
