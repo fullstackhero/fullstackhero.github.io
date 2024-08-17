@@ -1,13 +1,14 @@
+import react from "@astrojs/react";
 import starlight from '@astrojs/starlight';
 import tailwind from "@astrojs/tailwind";
-import { defineConfig } from 'astro/config';
-import react from "@astrojs/react";
 import icon from "astro-icon";
+import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
   integrations: [starlight({
     title: 'fullstackhero',
+    favicon: '/favicon.ico',
     components: {
       Pagination: './src/components/footer/pagination.astro'
     },
@@ -26,23 +27,31 @@ export default defineConfig({
     customCss: ['./src/styles/tailwind.css', './src/styles/custom.scss'],
     sidebar: [{
       label: 'General',
+      collapsed: true,
       autogenerate: {
-        directory: '/dotnet-starter-kit/general/'
+        directory: '/dotnet-starter-kit/general/',
+        collapsed: true
       }
     }, {
       label: 'Web API',
+      collapsed: true,
       autogenerate: {
-        directory: '/dotnet-starter-kit/webapi/'
+        directory: '/dotnet-starter-kit/webapi/',
+        collapsed: true
       }
     }, {
       label: 'Blazor',
+      collapsed: true,
       autogenerate: {
-        directory: '/dotnet-starter-kit/blazor/'
+        directory: '/dotnet-starter-kit/blazor/',
+        collapsed: true
       }
     }, {
       label: 'Aspire',
+      collapsed: true,
       autogenerate: {
-        directory: '/dotnet-starter-kit/aspire/'
+        directory: '/dotnet-starter-kit/aspire/',
+        collapsed: true
       }
     }]
   }), tailwind({

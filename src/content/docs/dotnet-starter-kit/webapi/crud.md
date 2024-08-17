@@ -1,5 +1,5 @@
 ---
-title: Development Environment
+title: CRUD Operations
 description: Setting up the Development Environment for .NET Starter Kit Development!
 sidebar:
   order: 2
