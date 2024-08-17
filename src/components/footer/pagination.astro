@@ -2,7 +2,13 @@
 import Default from '@astrojs/starlight/components/Pagination.astro';
 import type { Props } from '@astrojs/starlight/props';
 import Support from './support.astro';
+const isHomepage = Astro.props.slug === '';
 ---
-
-<Default {...Astro.props}><slot/></Default>
-<Support/>
+{
+    isHomepage ? (
+        <Default {...Astro.props}><slot/></Default>
+    ) : (
+        <Default {...Astro.props}><slot/></Default>
+        <Support/>
+    )
+}
