@@ -69,11 +69,11 @@ Please follow the below instructions.
     ![FullStackHero .NET Starter Kit](../../../../assets/docs/general/solution-generation.png)
 </Steps>
 
-# 🚀 FullStackHero .NET 8 Starter Kit Goals
+# 🚀 Goals
 
 > With Aspire Dashboard, ASP.NET Core Web API & Blazor Client
 
-# ✨ Technologies
+# ✨ Features & Technologies
 
 - ASP.NET Core 8
 - Entity Framework Core 8
@@ -83,7 +83,7 @@ Please follow the below instructions.
 - Redis
 - FluentValidation
 
-## 👨‍🚀 Architecture
+## 👨‍🚀 Solution Structure
 
 ## 📬 Service Endpoints
 
@@ -93,27 +93,29 @@ Please follow the below instructions.
 | -------- | ------ | ---------------- |
 | `/token` | POST   | Generates Token. |
 
-# 🧪 Running Locally
+## How to Run?
 
-# 🐳 Docker Support
+### 🧪 Standalone
+
+### 🐳 Docker Support
 
 # ☁️ Deploying to AWS
 
 # 🤝 Contributing
 
-# 📝 Notes
+## 📝 Migrations
 
-## Add Migrations
+<Steps>
+1. Run `dotnet tool install --global dotnet-ef`
+2. Navigate to `./api/server` and run the following EF CLI commands.
 
-Navigate to `./api/server` and run the following EF CLI commands.
+    ```bash
+    dotnet ef migrations add "Add Identity Schema" --project .././migrations/postgresql/ --context IdentityDbContext -o Identity
+    dotnet ef migrations add "Add Tenant Schema" --project .././migrations/postgresql/ --context TenantDbContext -o Tenant
+    dotnet ef migrations add "Add Todo Schema" --project .././migrations/postgresql/ --context TodoDbContext -o Todo
+    dotnet ef migrations add "Add Catalog Schema" --project .././migrations/postgresql/ --context CatalogDbContext -o Catalog
+    ```
+</Steps>
 
-```bash
-dotnet ef migrations add "Add Identity Schema" --project .././migrations/postgresql/ --context IdentityDbContext -o Identity
-dotnet ef migrations add "Add Tenant Schema" --project .././migrations/postgresql/ --context TenantDbContext -o Tenant
-dotnet ef migrations add "Add Todo Schema" --project .././migrations/postgresql/ --context TodoDbContext -o Todo
-dotnet ef migrations add "Add Catalog Schema" --project .././migrations/postgresql/ --context CatalogDbContext -o Catalog
-```
-
-# ⚖️ LICENSE
-
-MIT © [fullstackhero](LICENSE)
+# ✨ About 
+This starter kit is developed and maintained by [Mukesh Murugan](https://www.linkedin.com/in/iammukeshm/) under [MIT license](https://github.com/fullstackhero/dotnet-starter-kit/blob/main/LICENSE).
