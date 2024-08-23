@@ -1,0 +1,57 @@
+---
+title: Terraform
+description: Setting up the Development Environment for .NET Starter Kit Development!
+sidebar:
+  order: 2
+---
+import { Steps } from '@astrojs/starlight/components';
+
+## Pre-Requisites
+
+<Steps>
+1. Install Terraform on your machine
+    If you are on Windows, use Chocolatey to install Terraform via the following CLI command.
+
+    ```
+    choco install terraform
+    ```
+
+2. Once Terraform is installed, make sure that you machine is configured to authenticate into AWS. Please refer to [this article](https://codewithmukesh.com/blog/aws-credentials-for-dotnet-applications/#install-aws-cli). With that done, you are good to go!
+</Steps>
+
+## Bootstrapping
+
+If you are deploying the `FSH .NET Starter Kit` for the first time, navigate to `./terraform/boostrap` and run the following commands,
+
+```terraform
+terraform init
+terraform plan
+terraform apply --auto-approve
+```
+
+This will provision the required backend resources on AWS that terraform would need in the next steps. Basics this will create an Amazon S3 Bucket, and DynamoDB Table.
+
+## Deploy
+
+Navigate to `./environments/dev/` and run the following.
+
+```
+terraform init
+terraform plan
+terraform apply --auto-approve
+```
+
+This will deploy the following,
+
+- ECS Clusters and Tasks. (.NET Web API & Blazor)
+- RDS PostgreSQL Database Instance.
+- Required Networking Components like VPC, ALB etc.
+
+## Destroy
+
+Once you are done with your testing, ensure that you delete the resources to keep your bill under control.
+
+````
+terraform destroy --auto-approve
+````
+

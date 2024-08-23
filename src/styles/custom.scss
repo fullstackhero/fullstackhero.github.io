@@ -296,3 +296,7 @@ header {
 a{
   text-decoration: none !important;
 }
+
+.sl-markdown-content a:not(:where(.not-content *)){
+color: #3eaf7c;
+}
