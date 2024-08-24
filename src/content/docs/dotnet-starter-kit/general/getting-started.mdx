@@ -1,44 +1,54 @@
 ---
 title: Getting Started 🚀
-description: A guide in my new Starlight docs site.
+description: Let's get started with the FullStackHero .NET Starter Kit! The best way to start a fullstack .NET 8 Web App.
 sidebar:
   order: 1
 ---
 
 import { Steps } from '@astrojs/starlight/components';
 
-FullStackHero .NET Starter Kit is a starting point for your next `.NET 8 Clean Architecture` solution that incorporates the most essential packages and features your projects will ever need including out-of-the-box Multi-Tenancy support. This project can save well over 200+ hours of development time for your team.
+> Let's get started with the FullStackHero .NET Starter Kit, the best way to start a fullstack .NET 8 Web App.
+
+The FullStackHero .NET Starter Kit is the ultimate foundation for your next .NET 8 Clean Architecture solution, providing a comprehensive suite of essential packages and features, including built-in Multi-Tenancy support. With its pre-configured setup, this kit can accelerate your project development by saving over 200 hours of implementation time, allowing your team to focus on building core features from day one.
 
 ![FullStackHero .NET Starter Kit](../../../../assets/fullstackhero-dotnet-starter-kit.png)
 
-# Important
+## Social
 
-[Follow @iammukeshm on X](https://x.com/iammukeshm) for project related updates.
-
-# Quick Start Guide
+Follow [@iammukeshm on X](https://x.com/iammukeshm) for project related updates.
 
 ## Prerequisites
 
-Make sure that you have the following configured / setup on your development machine.
+Make sure that you have the following configured / setup on your development machine. 
 
 - .NET 8 SDK installed.
 - Visual Studio IDE.
-- Docker Desktop. (required only if you need the Aspire Dashboard running.)
+- Docker Desktop. (*required only if you need the Aspire Dashboard running.*)
 - PostgreSQL instance running on your machine or docker container.
 
-## Option #1 - FSH .NET Template
+For more details, please refer to the [Development Environment Guide](/dotnet-starter-kit/general/development-environment/).
+
+## Quick Start Guide
+
+To get started with this starter kit, here are the available options.
+
+1. Install the NuGet .NET CLI Template.
+2. Fork the Repository. Use this if you want to always keep your version of the StarterKit up-to date with the latest changes.
+
+
+### FSH .NET CLI Template
 
 FullStackHero .NET StarterKit is built to have seamless & developer friendly experience. To build your new .NET project based on this template, the recommended way is to install the .NET template package on your machine.
 
-<Steps>
-1. Install the template by running the following command.
+Install the template by running the following command.
 
-    ```
-    dotnet new install FullStackHero.NET.StarterKit::2.0.2-rc
-    ```
-</Steps>
+```
+dotnet new install FullStackHero.NET.StarterKit
+```
 
-## Option #2 - Fork!
+> To get the latest version of the package, visit [nuget.org](https://www.nuget.org/packages/FullStackHero.NET.StarterKit/). This Starter Kit is now in release candidate stage.
+
+### Forking the Repository
 
 Please follow the below instructions.
 
@@ -48,10 +58,11 @@ Please follow the below instructions.
    1. Aspire Dashboard (set as the default project)
    2. Web API
    3. Blazor
-4. Now we will have to set the connection string for the API. Navigate to `./src/api/server/appsettings.Development.json` and change the `ConnectionString` under `DatabaseOptions`. Save it.
-5. Once that is done, run the application via Visual Studio, with Aspire as the default project. This will open up Aspire Dashboard at `https://localhost:7200/`.
-6. API will be running at `https://localhost:7000/swagger/index.html`.
-7. Blazor will be running at `https://localhost:7100/`.
+4. Now we will have to set the connection string for the API. Navigate to `./src/api/server/appsettings.Development.json` and change the `ConnectionString` under `DatabaseOptions`. Save it. Currently the supported database instances are `postgresql` and `mssql`.
+5. Ensure that you have docker desktop up and running. If you want to skip the Docker part, you will have to make the default startup project as the `Server` and `Client` project.
+6. Once that is done, run the application via Visual Studio, with Aspire as the default project. This will open up Aspire Dashboard at `https://localhost:7200/`.
+7. API will be running at `https://localhost:7000/swagger/index.html`.
+8. Blazor will be running at `https://localhost:7100/`.
 
 ## Your First .NET Starter Kit Solution!
 
